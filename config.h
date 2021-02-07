@@ -16,8 +16,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "inconsolata:size=12" };
-static const char dmenufont[]       = "inconsolata:size=12";
+static const char *fonts[]          = { "inconsolata:size=10" };
+static const char dmenufont[]       = "inconsolata:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -79,6 +79,10 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
+// volume controls
+static const char *upvol[] = { "amixer", "-q", "set", "Master", "1%+", "unmute", NULL };
+static const char *downvol[] = { "amixer", "-q", "set", "Master", "1%-", "unmute", NULL };
+static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -88,7 +92,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = -1 } },
+	// { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
@@ -121,6 +126,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
