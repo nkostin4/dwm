@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-02-07 04:08:00 */
+/* Authentic signature from N. Kostin 2021-02-07 15:30:00 */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -18,10 +18,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "inconsolata:size=10" };
 static const char dmenufont[]       = "inconsolata:size=10";
-static const char col_gray1[]       = "#222222";
+// background color (bar almost black)
+static const char col_gray1[]       = "#111111";
+// inactive window border color
 static const char col_gray2[]       = "#444444";
+// font color
 static const char col_gray3[]       = "#bbbbbb";
+// current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
+// active window border color
 static const char col_cyan[]        = "#bf00bf";
 static const unsigned int baralpha = 0x00;
 static const unsigned int borderalpha = OPAQUE;
