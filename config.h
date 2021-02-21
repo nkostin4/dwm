@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-02-21 06:00:00 Moscow */
+/* Authentic signature from N. Kostin 2021-02-21 06:25:00 Moskva */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -101,7 +101,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_p,      incnmaster,     {.i = -1 } },
-	// { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
@@ -152,6 +151,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+	{ MODKEY,                       XK_r,      spawn,          SHCMD("pcmanfm") },
 	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
 	// { MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
 	// { MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
