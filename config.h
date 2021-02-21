@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-02-07 15:30:00 */
+/* Authentic signature from N. Kostin 2021-02-20 18:00:00 */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -90,6 +90,8 @@ static const char *upvol[] = { "amixer", "-q", "set", "Master", "1%+", "unmute",
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "1%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
+#include <X11/XF86keysym.h>
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -148,10 +150,18 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
-	{ MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
-	{ MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
+	// { MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
+	// { MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
+	{ MODKEY,                       XF86XK_AudioRaiseVolume,     spawn,          {.v = upvol }   },
+	{ MODKEY,                       XF86XK_AudioLowerVolume,     spawn,          {.v = downvol } },
+	{ MODKEY,                       XF86XK_AudioMute,            spawn,          {.v = mutevol } },
+	{ MODKEY,                       XF86XK_AudioPlay,            spawn,          SHCMD("mpc toggle") },
+	{ MODKEY,                       XF86XK_AudioPrev,            spawn,          SHCMD("mpc prev") },
+	{ MODKEY,                       XF86XK_AudioNext,            spawn,          SHCMD("mpc next") },
+	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight -inc 15")  },
+	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("xbacklight -dec 15")  },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
