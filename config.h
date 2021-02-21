@@ -152,6 +152,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("pcmanfm") },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD(TERMINAL " -e htop") },
 	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
 	// { MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
 	// { MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
