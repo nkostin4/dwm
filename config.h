@@ -6,7 +6,7 @@
 #define TERMCLASS "URxvt"
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
@@ -151,7 +151,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("$BROWSER") },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("pcmanfm") },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD(TERMINAL " -e htop") },
 	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
