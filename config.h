@@ -4,6 +4,8 @@
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
+// #define TERMINAL "st"
+// #define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
