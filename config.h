@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-03-08 04:16:00 Moskva */
+/* Authentic signature from N. Kostin 2021-03-18 04:16:00 Moskva */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -29,7 +29,8 @@ static const char col_gray3[]       = "#bbbbbb";
 // current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
 // active window border color
-static const char col_cyan[]        = "#bf00bf";
+static const char col_cyan[]        = "#cc3333";
+// static const char col_cyan[]        = "#bf00bf";
 static const unsigned int baralpha = 0x00;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
