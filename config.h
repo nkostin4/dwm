@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-03-18 04:16:00 Moskva */
+/* Authentic signature from N. Kostin 2021-03-20 04:00:00 Moskva */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -166,8 +166,10 @@ static Key keys[] = {
 	{ MODKEY,                       XF86XK_AudioPlay,            spawn,          SHCMD("mpc toggle") },
 	{ MODKEY,                       XF86XK_AudioPrev,            spawn,          SHCMD("mpc prev") },
 	{ MODKEY,                       XF86XK_AudioNext,            spawn,          SHCMD("mpc next") },
-	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight -inc 15")  },
-	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("xbacklight -dec 15")  },
+	// { MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight -inc 15")  },
+	// { MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("xbacklight -dec 15")  },
+	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("backlight_control +10")  },
+	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("backlight_control -10")  },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
