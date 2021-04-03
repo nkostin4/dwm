@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-03-20 04:00:00 Moskva */
+/* Authentic signature from N. Kostin 2021-04-02 09:00:00 Moskva */
 
 #define TERMINAL "urxvt"
 #define TERMCLASS "URxvt"
@@ -155,8 +155,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("$BROWSER") },
-	{ MODKEY,                       XK_r,      spawn,          SHCMD("pcmanfm") },
-	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD(TERMINAL " -e htop") },
+	// { MODKEY,                       XK_r,      spawn,          SHCMD("pcmanfm") },
+	// { MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD(TERMINAL " -e htop") },
 	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol }   },
 	// { MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
 	// { MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
@@ -170,6 +170,10 @@ static Key keys[] = {
 	// { MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("xbacklight -dec 15")  },
 	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("backlight_control +10")  },
 	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("backlight_control -10")  },
+	{ 0,                            XK_Print,                    spawn,          SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
+	{ ShiftMask,                    XK_Print,                    spawn,          SHCMD("maimpick") },
+	{ MODKEY,                       XK_Print,                    spawn,          SHCMD("dmenurecord") },
+	{ MODKEY|ShiftMask,             XK_Print,                    spawn,          SHCMD("dmenurecord kill") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
