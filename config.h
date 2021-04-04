@@ -1,11 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-04-02 09:00:00 Moskva */
+/* Authentic signature from N. Kostin 2021-04-04 20:00:00 Moskva */
 
-#define TERMINAL "urxvt"
-#define TERMCLASS "URxvt"
-// #define TERMINAL "st"
-// #define TERMCLASS "St"
+// #define TERMINAL "urxvt"
+// #define TERMCLASS "URxvt"
+#define TERMINAL "st"
+#define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
