@@ -1,7 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-/* Authentic signature from N. Kostin 2021-07-22 00:00:00 Moskva */
-
 // #define TERMINAL "urxvt"
 // #define TERMCLASS "URxvt"
 #define TERMINAL "st"
