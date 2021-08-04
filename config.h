@@ -152,9 +152,9 @@ static Key keys[] = {
 	{ MODKEY,                       XF86XK_AudioMute,            spawn,          {.v = mutevol } },
 	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("backlight_control +10") },
 	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("backlight_control -10") },
-	{ MODKEY,                       XK_F7,                       spawn,          SHCMD("maimpick") },
 	{ MODKEY,                       XK_F8,                       spawn,          SHCMD("dmenuemoji") },
 	{ MODKEY,                       XK_F9,                       spawn,          SHCMD("dmenubookmarks") },
+	{ MODKEY,                       XK_F10,                      spawn,          SHCMD("maimpick") },
 	{ MODKEY,                       XK_Print,                    spawn,          SHCMD("dmenurecord") },
 	{ MODKEY|ShiftMask,             XK_Print,                    spawn,          SHCMD("dmenurecord kill") },
 	TAGKEYS(                        XK_1,                      0)
