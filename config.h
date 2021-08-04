@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-// Don't be a Brainlet
+// Nicholas D. Kostin
 
 // #define TERMINAL "urxvt"
 // #define TERMCLASS "URxvt"
