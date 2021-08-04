@@ -18,17 +18,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "inconsolata:size=12", "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "inconsolata:size=12";
-// background color (bar almost black)
 static const char col_gray1[]       = "#111111";
-// inactive window border color
 static const char col_gray2[]       = "#444444";
-// font color
 static const char col_gray3[]       = "#bbbbbb";
-// current tag and current window font color
 static const char col_gray4[]       = "#ffffff";
-// active window border color
 static const char col_cyan[]        = "#cc3333";
-// static const char col_cyan[]        = "#bf00bf";
 static const unsigned int baralpha = OPAQUE;
 // static const unsigned int baralpha = 0x00;
 static const unsigned int borderalpha = OPAQUE;
@@ -152,19 +146,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("$BROWSER") },
-	// { MODKEY,                       XK_F3,     spawn,          {.v = upvol   } },
-	// { MODKEY,                       XK_F2,     spawn,          {.v = downvol } },
-	// { MODKEY,                       XK_F1,     spawn,          {.v = mutevol } },
+	{ MODKEY,                       XK_w,                        spawn,          SHCMD("$BROWSER") },
 	{ MODKEY,                       XF86XK_AudioRaiseVolume,     spawn,          {.v = upvol   } },
 	{ MODKEY,                       XF86XK_AudioLowerVolume,     spawn,          {.v = downvol } },
 	{ MODKEY,                       XF86XK_AudioMute,            spawn,          {.v = mutevol } },
-	// { MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("xbacklight -inc 15")  },
-	// { MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("xbacklight -dec 15")  },
-	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("backlight_control +10")  },
-	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("backlight_control -10")  },
-	{ 0,                            XK_Print,                    spawn,          SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
-	{ ShiftMask,                    XK_Print,                    spawn,          SHCMD("maimpick") },
+	{ MODKEY,                       XF86XK_MonBrightnessUp,      spawn,          SHCMD("backlight_control +10") },
+	{ MODKEY,                       XF86XK_MonBrightnessDown,    spawn,          SHCMD("backlight_control -10") },
+	{ MODKEY,                       XK_F7,                       spawn,          SHCMD("maimpick") },
+	{ MODKEY,                       XK_F8,                       spawn,          SHCMD("dmenuemoji") },
+	{ MODKEY,                       XK_F9,                       spawn,          SHCMD("dmenubookmarks") },
 	{ MODKEY,                       XK_Print,                    spawn,          SHCMD("dmenurecord") },
 	{ MODKEY|ShiftMask,             XK_Print,                    spawn,          SHCMD("dmenurecord kill") },
 	TAGKEYS(                        XK_1,                      0)
