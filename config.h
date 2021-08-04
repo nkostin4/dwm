@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+// Don't be a Brainlet
+
 // #define TERMINAL "urxvt"
 // #define TERMCLASS "URxvt"
 #define TERMINAL "st"
