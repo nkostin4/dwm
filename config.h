@@ -1,9 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
-// #define TERMINAL "urxvt"
-// #define TERMCLASS "URxvt"
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "st" /* Use "urxvt" for urxvt */
+#define TERMCLASS "St" /* Use "URxvt" for urxvt */
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
